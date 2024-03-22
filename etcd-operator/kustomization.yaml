@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: marques
 resources:
 - etcd-operator.yaml
+- etcd-cluster.yaml
