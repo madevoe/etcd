@@ -1,0 +1,37 @@
+---
+# Source: regional-extension-server-common/templates/redis_configmap.yaml
+apiVersion: v1
+data:
+  master.conf: |-
+    dir /data
+    rename-command FLUSHDB ""
+    rename-command FLUSHALL ""
+  redis.conf: |-
+    # User-supplied configuration:
+    # maxmemory-policy volatile-lru
+    tls-cert-file /etc/certs/redis/redisserver.crt
+    tls-key-file /etc/certs/redis/redisserver.key
+    tls-ca-cert-file /etc/certs/redis/redisca.crt
+    port 6379
+    tls-port 6378
+    tls-protocols "TLSv1.3"
+    ## client certs are accepted but not required
+    tls-auth-clients   optional
+    ## enable TLS on replication links
+    tls-replication yes
+    ## enable TLS for cluster bus connection instead of TCP
+    tls-cluster yes
+  replica.conf: |-
+    dir /data
+    rename-command FLUSHDB ""
+    rename-command FLUSHALL ""
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-01-08T16:50:19Z"
+  labels:
+    app: redis
+    release: redis
+  name: redis
+  namespace: rias
+  resourceVersion: "30347"
+  uid: d30a515f-a016-4698-8e1f-501f0d25c29b
