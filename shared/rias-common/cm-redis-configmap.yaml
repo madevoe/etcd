@@ -27,11 +27,11 @@ data:
     rename-command FLUSHALL ""
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-01-08T16:50:19Z"
+#  creationTimestamp: "2024-01-08T16:50:19Z"
   labels:
     app: redis
     release: redis
   name: redis
   namespace: rias
-  resourceVersion: "30347"
-  uid: d30a515f-a016-4698-8e1f-501f0d25c29b
+#  resourceVersion: "30347"
+#  uid: d30a515f-a016-4698-8e1f-501f0d25c29b
