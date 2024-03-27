@@ -7,3 +7,4 @@ resources:
 - etcd-operator-sa.yaml
 - etcd-operator-role.yaml
 - etcd-operator-rolebinding.yaml
+- etcd-operator-deployment.yaml
