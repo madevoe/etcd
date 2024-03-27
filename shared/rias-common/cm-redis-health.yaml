@@ -45,11 +45,11 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-  creationTimestamp: "2024-01-08T16:50:19Z"
+#  creationTimestamp: "2024-01-08T16:50:19Z"
   labels:
     app: redis
     release: redis
   name: redis-health
   namespace: rias
-  resourceVersion: "30342"
-  uid: a2db5ddd-bb07-4a59-85e7-7c12cd5a412c
+#  resourceVersion: "30342"
+#  uid: a2db5ddd-bb07-4a59-85e7-7c12cd5a412c
