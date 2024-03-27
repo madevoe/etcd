@@ -1,0 +1,30 @@
+apiVersion: etcd.database.coreos.com/v1beta2
+kind: EtcdCluster
+metadata:
+  name: rias-etcd-cluster
+  namespace: rias
+spec:
+  pod:
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchLabels:
+              app: etcd
+              etcd_cluster: rias-etcd-cluster
+          namespaces:
+          - rias
+          topologyKey: kubernetes.io/hostname
+    busyboxImage: busybox:1.28.0-glibc
+    resources: {}
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Exists
+    volumeSource:
+      hostPath:
+        path: "/etcd-data-dir"
+        type: "DirectoryOrCreate"
+  repository: quay.io/coreos/etcd
+  size: 3
+  version: 3.2.17
