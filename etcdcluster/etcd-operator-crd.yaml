@@ -13,11 +13,16 @@ spec:
     - etcd
     singular: etcdcluster
   scope: Namespaced
-  version: v1beta2
+  version: v1
   versions:
-    schema:
-      openAPIV3Schema:
-  - name: v1beta2
+  - name: v1
     served: true
     storage: true
-    
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          host:
+            type: string
+          port:
+            type: string    
