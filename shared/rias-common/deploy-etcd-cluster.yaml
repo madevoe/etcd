@@ -1,30 +1,15 @@
 apiVersion: etcd.database.coreos.com/v1beta2
 kind: EtcdCluster
 metadata:
-  name: rias-etcd-cluster
+  name: rias-etcdcluster
   namespace: rias
 spec:
-  pod:
-    affinity:
-      podAntiAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-        - labelSelector:
-            matchLabels:
-              app: etcd
-              etcd_cluster: rias-etcd-cluster
-          namespaces:
-          - rias
-          topologyKey: kubernetes.io/hostname
-    busyboxImage: busybox:1.28.0-glibc
-    resources: {}
-    tolerations:
-    - effect: NoSchedule
-      key: node-role.kubernetes.io/master
-      operator: Exists
-    volumeSource:
-      hostPath:
-        path: "/etcd-data-dir"
-        type: "DirectoryOrCreate"
-  repository: quay.io/coreos/etcd
   size: 3
   version: 3.2.17
+# The following lines are needed for TLS
+#  TLS:
+#    static:
+#      member:
+#        peerSecret: etcd-peer-tls
+#        serverSecret: etcd-server-tls
+#      operatorSecret: etcd-client-tls
