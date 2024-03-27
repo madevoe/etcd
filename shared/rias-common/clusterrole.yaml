@@ -3,7 +3,7 @@ kind: ClusterRole
 metadata:
   name: rias-etcd
   labels:
-    app.kubernetes.io/part-of: argocd    
+    argocd.argoproj.io/managed-by=argocd
 rules:
 - apiGroups:
   - etcd.database.coreos.com
