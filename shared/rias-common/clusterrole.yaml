@@ -2,8 +2,6 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: rias-etcd
-  labels:
-    argocd.argoproj.io/managed-by=argocd
 rules:
 - apiGroups:
   - etcd.database.coreos.com
