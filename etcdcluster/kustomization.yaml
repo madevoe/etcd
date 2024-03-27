@@ -4,3 +4,4 @@ namespace: rias
 resources:
 - namespace.yaml
 - etcd-operator-crd.yaml
+- etcd-operator-sa.yaml
