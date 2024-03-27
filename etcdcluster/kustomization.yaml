@@ -5,3 +5,4 @@ resources:
 - namespace.yaml
 - etcd-operator-crd.yaml
 - etcd-operator-sa.yaml
+- etcd-operator-role.yaml
