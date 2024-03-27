@@ -6,3 +6,4 @@ resources:
 - etcd-operator-crd.yaml
 - etcd-operator-sa.yaml
 - etcd-operator-role.yaml
+- etcd-operator-rolebinding.yaml
