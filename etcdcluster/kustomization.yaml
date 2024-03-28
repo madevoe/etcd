@@ -8,4 +8,4 @@ resources:
 - etcd-operator-role.yaml
 - etcd-operator-rolebinding.yaml
 - etcd-operator-deployment.yaml
-#- etcd-cluster-cr.yaml
+- etcd-cluster-cr.yaml
