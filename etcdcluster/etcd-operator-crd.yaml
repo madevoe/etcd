@@ -13,8 +13,8 @@ spec:
     shortNames:
     - etcdclus
     - etcd
-#    singular: etcdcluster
-  scope: Namespaced
+    singular: etcdcluster
+#  scope: Namespaced
   version: v1
   versions:
   - name: v1
