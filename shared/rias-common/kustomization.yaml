@@ -8,4 +8,4 @@ resources:
  - pvc-rias-etcd-hostPath.yaml
  - svc-etcd-service.yaml
  - deploy-etcd.yaml
- - deploy-etcd-cluster.yaml
+ #- deploy-etcd-cluster.yaml
