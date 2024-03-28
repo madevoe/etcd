@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: rias
   labels:
-    argocd.argoproj.io/managed-by: rias
+#    argocd.argoproj.io/managed-by: rias
     pod-security.kubernetes.io/audit: privileged
     pod-security.kubernetes.io/audit-version: v1.24
     pod-security.kubernetes.io/enforce: privileged
