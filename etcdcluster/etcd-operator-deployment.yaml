@@ -4,6 +4,7 @@ metadata:
   labels:
     name: etcdoperator
   name: etcd-operator
+  namespace: rias
 spec:
   replicas: 1
   selector:
