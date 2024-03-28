@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: rias
 resources:
 - namespace.yaml
-#- etcd-operator-crd.yaml
+- etcd-operator-crd.yaml
 #- etcd-operator-sa.yaml
 #- etcd-operator-role.yaml
 #- etcd-operator-rolebinding.yaml
