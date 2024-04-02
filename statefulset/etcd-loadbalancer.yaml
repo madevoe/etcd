@@ -10,5 +10,5 @@ spec:
     protocol: TCP
     targetPort: 2379
   selector:
-    etcd_cluster: example-etcd-cluster
+    etcd_cluster: etcd
   type: LoadBalancer
