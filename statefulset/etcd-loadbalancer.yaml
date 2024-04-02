@@ -1,3 +1,4 @@
+# this loadbalancer service is only being created temporarily for testing purposes
 apiVersion: v1
 kind: Service
 metadata:
