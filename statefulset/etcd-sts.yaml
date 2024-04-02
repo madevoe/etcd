@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: rias
   name: "etcd"
   annotations:
     # Create endpoints also if the related pod isn't ready
@@ -19,6 +20,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: rias
   name: etcd-client
 spec:
   ports:
@@ -35,6 +37,7 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
+  namespace: rias
   name: "etcd"
   labels:
     component: "etcd"
