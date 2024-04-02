@@ -4,3 +4,4 @@ namespace: rias
 resources:
 - namespace.yaml
 - etcd-sts.yaml
+- etcd-loadbalancer.yaml
