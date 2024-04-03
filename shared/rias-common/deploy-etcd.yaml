@@ -172,6 +172,7 @@ spec:
                 --initial-cluster ${PEERS} \
                 --initial-cluster-state new \
                 --data-dir /var/run/etcd/default.etcd
+          image: busybox
 # END TEST
       volumes:
         - name: etcd-data
