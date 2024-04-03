@@ -74,7 +74,7 @@ spec:
         - name: INITIAL_CLUSTER_SIZE
           value: "3"
         - name: CLUSTER_SIZE
-          value: "5"
+          value: "3"
         - name: SET_NAME
           value: "etcd"
         volumeMounts:
