@@ -24,6 +24,8 @@ spec:
         app:  rias-etcd
     spec:
       containers:
+      - name:  busybox
+        image:  busybox
       - name:  rias-etcd
         image:  bitnami/etcd:latest
         resources:
@@ -80,7 +82,6 @@ spec:
                       rm -rf /var/run/etcd/*
                   fi
                 fi
-        image: busybox
         command:
           - "/bin/bash"
           - "-ecx"
