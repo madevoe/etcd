@@ -24,9 +24,8 @@ spec:
         app:  rias-etcd
     spec:
       containers:
-      - name:  busybox
-        image:  busybox
       - name:  rias-etcd
+        image:  busybox
         image:  bitnami/etcd:latest
         resources:
           requests:
