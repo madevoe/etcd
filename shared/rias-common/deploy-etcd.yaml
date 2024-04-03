@@ -60,7 +60,7 @@ spec:
           preStop:
             exec:
               command:
-              - "/bin/sh"
+              - "/bin/bash"
               - "-ec"
               - |
                 EPS=""
@@ -81,7 +81,7 @@ spec:
                   fi
                 fi
         command:
-          - "/bin/sh"
+          - "/bin/bash"
           - "-ecx"
           - |
             HOSTNAME=$(hostname)
