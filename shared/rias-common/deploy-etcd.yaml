@@ -26,7 +26,7 @@ spec:
       containers:
       - name:  rias-etcd
 #        image:  bitnami/etcd:latest
-         image: "gcr.io/etcd-development/etcd:v3.5.0"
+        image: "gcr.io/etcd-development/etcd:v3.5.0"
          resources:
           requests:
             cpu: 100m
