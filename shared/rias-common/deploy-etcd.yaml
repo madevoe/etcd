@@ -80,6 +80,7 @@ spec:
                       rm -rf /var/run/etcd/*
                   fi
                 fi
+        image: busybox
         command:
           - "/bin/bash"
           - "-ecx"
@@ -172,7 +173,6 @@ spec:
                 --initial-cluster ${PEERS} \
                 --initial-cluster-state new \
                 --data-dir /var/run/etcd/default.etcd
-          image: busybox
 # END TEST
       volumes:
         - name: etcd-data
