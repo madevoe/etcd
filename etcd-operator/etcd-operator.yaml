@@ -6,6 +6,6 @@ metadata:
 spec:
   channel: latest
   installPlanApproval: Automatic
-  name: etcd-operator
+  name: etcd
   source: community-operators 
   sourceNamespace: openshift-marketplace 
