@@ -7,5 +7,5 @@ spec:
   channel: latest
   installPlanApproval: Automatic
   name: etcd-operator
-  source: redhat-operators 
+  source: community-operators 
   sourceNamespace: openshift-marketplace 
