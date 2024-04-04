@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name:  rias-etcd
-        image:  bitnami/etcd:latest
+        image:  quay.io/coreos/etcd
         resources:
           requests:
             cpu: 100m
