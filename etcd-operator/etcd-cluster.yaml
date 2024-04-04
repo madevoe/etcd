@@ -5,8 +5,8 @@ metadata:
   namespace: rias
   ## Adding this annotation make this cluster managed by clusterwide operators
   ## namespaced operators ignore it
-  # annotations:
-  #   etcd.database.coreos.com/scope: clusterwide
+  annotations:
+    etcd.database.coreos.com/scope: clusterwide
 spec:
   size: 3
   version: 3.2.17
