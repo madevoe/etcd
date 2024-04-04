@@ -11,4 +11,4 @@ spec:
   name: etcd
   source: community-operators 
   sourceNamespace: openshift-marketplace 
-  startingCSV: etcd.v0.9.4-clusterwide
+  startingCSV: 0.9.4-clusterwide
