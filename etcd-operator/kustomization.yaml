@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
 - namespace.yaml
 #- etcd-operatorgroup.yaml   # not necessary as an operator group already exists for the openshift-operators namespace
-- etcd-operator.yaml
+#- etcd-operator.yaml
+- deployment.yaml
 - etcd-cluster.yaml
