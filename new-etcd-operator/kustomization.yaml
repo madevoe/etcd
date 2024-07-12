@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- namespace.yaml
+- clusterrole.yaml
+- clusterrolebinding.yaml
+- etcd-operator.yaml
+- etcd-cluster.yaml
+# - etcd-backup-operator.yaml
+# - etcd-cluster-backup.yaml
+# - etcd-restore-operator.yaml
+# - etcd-cluster-restore.yaml
