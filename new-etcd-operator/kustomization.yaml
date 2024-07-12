@@ -5,7 +5,8 @@ resources:
 - clusterrole.yaml
 - clusterrolebinding.yaml
 - etcd-operator.yaml
-- etcd-cluster.yaml
+# - etcd-cluster.yaml
+
 # - etcd-backup-operator.yaml
 # - etcd-cluster-backup.yaml
 # - etcd-restore-operator.yaml
