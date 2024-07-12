@@ -1,8 +1,8 @@
 apiVersion: etcd.database.coreos.com/v1beta2
 kind: EtcdCluster
 metadata:
-  name: rias-etcd-cluster
-  namespace: rias
+  name: marques-etcd-cluster
+  namespace: marques
 spec:
   pod:
     affinity:
@@ -11,9 +11,9 @@ spec:
         - labelSelector:
             matchLabels:
               app: etcd
-              etcd_cluster: rias-etcd-cluster
+              etcd_cluster: marques-etcd-cluster
           namespaces:
-          - rias
+          - marques
           topologyKey: kubernetes.io/hostname
     busyboxImage: busybox:1.28.0-glibc
     resources: {}
