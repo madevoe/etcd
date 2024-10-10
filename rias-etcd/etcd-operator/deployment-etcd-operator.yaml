@@ -1,0 +1,56 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: etcd-operator
+  namespace: rias-etcd
+  labels:
+    app: etcd-operator
+#    release: {{ release_version }}
+spec:
+  selector:
+    matchLabels:
+      app: etcd-operator
+  replicas: 1
+  revisionHistoryLimit: 0
+  template:
+    metadata:
+      annotations:
+        sysdig.prometheus.io/path: /metrics
+        sysdig.prometheus.io/port: "8080"
+        sysdig.prometheus.io/scheme: https
+        sysdig.prometheus.io/scrape: "true"
+      name: etcd-operator
+      labels:
+        app: etcd-operator
+#        release: {{ release_version }}
+    spec:
+      serviceAccountName: etcd-operator
+      imagePullSecrets:
+#        - name: regcred
+        - name: sdsaas-repo-pull-secret
+      containers:
+      - name: etcd-operator
+        image: docker-na-public.artifactory.swg-devops.com/wcp-genctl-docker-local/cloudlab/etcd-operator:1.4.0
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - mountPath: /etc/etcdtls/operator/etcd-tls
+          name: etcd-client-tls
+        command:
+        - etcd-operator
+        env:
+        - name: MY_POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: MY_POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+      volumes:
+#      - name: etcd-operator-tls
+      - name: etcd-client-tls
+        secret:
+         defaultMode: 420
+         secretName: etcd-client-tls
+#         secretName: etcd-operator-tls

@@ -1,0 +1,41 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: rias-etcd:etcd-operator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: rias-etcd:etcd-operator
+subjects:
+- kind: ServiceAccount
+  name: etcd-operator
+  namespace: rias-etcd
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+  name: rias-etcd:etcd-operator-crt-cluster
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: rias-etcd:etcd-operator-crt-cluster
+subjects:
+- kind: ServiceAccount
+  name: etcd-operator
+  namespace: rias-etcd
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+  name: rias-etcd:etcd-operator-crt-cluster-create
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: rias-etcd:etcd-operator-crt-cluster-create
+subjects:
+- kind: ServiceAccount
+  name: etcd-operator
+  namespace: rias-etcd

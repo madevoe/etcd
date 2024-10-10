@@ -1,0 +1,35 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+# etcd-operator
+ - namespace-rias-etcd.yaml
+ - serviceaccount-etcd-operator.yaml
+ - clusterrole-etcd-operator.yaml
+ - clusterrolebinding-etcd-operator.yaml
+ - role-etcd-operator.yaml
+ - rolebinding-etcd-operator.yaml
+ - etcd-client-secrets.yaml
+ - etcd-peer-secrets.yaml
+ - etcd-server-secrets.yaml
+ - deployment-etcd-operator.yaml
+
+# etcd-cluster
+# - customresourcedefinition-etcd-cluster.yaml
+# - etcd-cluster-pdb.yaml
+# - etcd-cluster-service.yaml
+# - etcd-cluster.yaml
+
+# etcd-backup-operator
+# - clusterrole-etcd-backup-operator.yaml
+# - clusterrolebinding-etcd-backup-operator.yaml
+# - customresourcedefinition-etcd-backup-operator.yaml
+# - deployment-etcd-backup-operator.yaml
+# - serviceaccount-etcd-backup-operator.yaml
+
+# - etcd-restore-operator
+# - clusterrole-etcd-restore-operator.yaml
+# - clusterrolebinding-etcd-restore-operator.yaml
+# - customresourcedefinition-etcd-restore-operator.yaml
+# - deployment-etcd-restore-operator.yaml
+# - service-etcd-restore-operator.yaml
+# - serviceaccount-etcd-restore-operator.yaml
